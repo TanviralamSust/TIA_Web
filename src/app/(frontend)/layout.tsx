@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const lora = Lora({ subsets: ['latin'], variable: '--font-lora', display: 'swap' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'),
   title: 'Toronto Islamic Academy | K-8 Islamic School in Toronto',
   description:
     'Toronto Islamic Academy offers a holistic Ontario-curriculum education for Junior Kindergarten through Grade 8, blending faith, character, and academic excellence.',
