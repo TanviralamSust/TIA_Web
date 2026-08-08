@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-forest-50: #f2f5ee;
+  --color-forest-100: #e1e9d6;
+  --color-forest-200: #c3d3ad;
+  --color-forest-300: #9fb87f;
+  --color-forest-400: #7a9a5b;
+  --color-forest-500: #5c7c40;
+  --color-forest-600: #46612f;
+  --color-forest-700: #384e26;
+  --color-forest-800: #2f4020;
+  --color-forest-900: #28351c;
+  --color-forest-950: #141d0e;
+
+  --color-cream-50: #fefdf9;
+  --color-cream-100: #faf6e8;
+  --color-cream-200: #f3ecd1;
+  --color-cream-300: #eadfaf;
+  --color-cream-400: #dcc985;
+
+  --color-gold-400: #c9a35a;
+  --color-gold-500: #b58a3f;
+  --color-gold-600: #96702f;
+}
+
+@layer base {
+  body {
+    @apply bg-cream-50 text-forest-950 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}
