@@ -7,6 +7,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const lora = Lora({ subsets: ['latin'], variable: '--font-lora', display: 'swap' })
 
+// Content is managed through /admin, so pages must not stay frozen at build time -
+// re-check for updates at most once a minute instead of caching indefinitely.
+export const revalidate = 60
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'),
   title: 'Toronto Islamic Academy | K-8 Islamic School in Toronto',
